@@ -20,11 +20,23 @@ Este projeto foi desenvolvido por:
 ---
 
 
-## 🎯 Resumo do Projeto
+## 🎯 1. Resumo do Projeto
 O **Gradient Boosting Classifier** é um método de ensemble poderoso, mas que frequentemente sofre em datasets onde uma classe é muito mais frequente que a outra (Class Imbalance). Este trabalho explora:
 1. A implementação base do algoritmo usando apenas **NumPy** e **SciPy**.
 2. A avaliação experimental em datasets de benchmark.
 3. A identificação de falhas nas métricas tradicionais (como Accuracy) em cenários de desequilíbrio.
+
+---
+
+### 🧠 2. Mecanismo de Gradient Boosting
+Ao contrário de modelos que tentam resolver o problema de uma só vez, o nosso Gradient Boosting funciona por **estágios sucessivos**:
+
+1.  **Previsão Inicial:** O modelo começa com um valor base: a probabilidade média da classe nos dados de treino.
+2.  **Cálculo de Resíduos:** Em cada iteração, o algoritmo identifica onde errou na etapa anterior através da derivada da **LogLoss** (função de perda).
+3.  **Treino de Weak Learners:** Uma nova **Árvore de Decisão** é treinada especificamente para prever estes erros, ou resíduos, e não o valor final.
+4.  **Consolidação com Learning Rate:** Esta nova árvore é somada ao modelo acumulado, multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, garantindo que o modelo não decore os dados (overfitting), o que permite uma evolução gradual e robusta.
+
+
 
 ---
 
