@@ -30,13 +30,12 @@ O **Gradient Boosting Classifier** é um método de ensemble poderoso, mas que f
 ## 📁 Estrutura de Ficheiros
 * `gbm.py`: Contém a lógica do Gradient Boosting e funções de perda (LogLoss).
 * `tree.py`: Implementação da Árvore de Decisão (weak learner) sem dependências externas.
-* `final_assignment.py`: Script de automação que carrega os datasets da pasta `/data`, realiza o pré-processamento e executa os testes.
+* `final_assignment.py`: Script de automação que carrega os datasets da pasta `/data` e realiza:
     * **Pré-processamento:** Tratamento de valores omissos e encoding de variáveis categóricas.
     * **Validação:** Divisão aleatória (Hold-out 80/20) para garantir a integridade estatística dos testes.
 * `data/`: Pasta onde devem ser colocados os ficheiros `.csv`.
 
-## 🛠️ Instalação e Execução
-1. Certifica-te de que tens o Python 3.x instalado.
-2. Instala as dependências necessárias para manipulação de dados:
-   ```bash
-   pip install numpy pandas scikit-learn scipy
+## 🛠️ Como Executar
+1. Colocar os datasets `.csv` na pasta `/data`.
+2. Instalar dependências: `pip install numpy pandas scikit-learn scipy`
+3. Correr o script principal: `python final_assignment.py`
