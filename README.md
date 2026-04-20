@@ -93,18 +93,10 @@ Para garantir que o modelo de Gradient Boosting processa corretamente os conjunt
    python final_assignment.py
 ---
 
-## 🏁 7. Conclusões da Fase 1
-
-Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao tentar minimizar a perda global (LogLoss), prioriza a classe majoritária. 
-
-* ***Accuracy* enganadora:** Em datasets como o `oil_spill`, atingimos acurácias superiores a 95%, mas um F1-Score nulo. Isto prova que o modelo "aprendeu" que prever sempre a classe comum é o caminho mais curto para o sucesso matemático, falhando no sucesso clínico/prático.
-* **Fundamentação para Melhoria:** Estes dados documentados justificam a necessidade de evoluir para uma função de custo ponderada ou ajuste de limiares, que será o foco de intervenções futuras para balancear a deteção da classe minoritária.
-
-
 
 ## 🏁 7. Conclusões da Fase 1
 
-Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (log loss), tende a favorecer a classe maioritária.
+Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (*log loss*), tende a favorecer a classe maioritária.
 
-- **Acurácia enganadora:** Em conjuntos de dados como `oil_spill`, foram obtidas acurácias superiores a 95%, apesar de um F1-score nulo. Isto evidencia que o modelo pode otimizar a métrica global sem capturar adequadamente a classe minoritária, privilegiando a classe dominante.
+- ***Accuracy* enganadora:** Em conjuntos de dados como `oil_spill`, foram obtidos *accuracy values* superiores a 95%, apesar de um F1-score nulo. Isto evidencia que o modelo pode otimizar a métrica global sem capturar adequadamente a classe minoritária, privilegiando a classe dominante.
 - **Fundamentação para melhorias:** Estes resultados justificam a necessidade de evoluir para abordagens como funções de custo ponderadas ou ajuste de limiares, que serão exploradas em fases futuras para melhorar a deteção da classe minoritária.
