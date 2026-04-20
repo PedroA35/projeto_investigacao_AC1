@@ -116,7 +116,26 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 | **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos crítico e os resultados de F1-score são mais estáveis. |
 
 
-### 3.1. Estratégia de Análise por Nível de Severidade
+
+### 📊 3.1. Caracterização dos Datasets de Benchmark 
+
+### 3.1. Caracterização dos Datasets de Benchmark
+
+A avaliação foi realizada em conjuntos de dados reais de diferentes domínios (medicina, biologia e engenharia), apresentando vários níveis de desequilíbrio entre classes (IR).
+
+| Dataset | Domínio | IR | Dificuldade Esperada |
+| :--- | :--- | :--- | :--- |
+| `yeast_ml8` | Biologia | 0.014 | Extrema |
+| `arsenic-ml` | Saúde Pública | 0.024 | Extrema |
+| `oil_spill` | Ambiente | 0.046 | Extrema |
+| `sick` | Medicina | 0.066 | Moderada |
+| `hypothyroid` | Medicina | 0.085 | Moderada |
+| `backache` | Medicina | 0.161 | Suave |
+| `chlamydia` | Saúde Pública | 0.235 | Suave |
+
+*Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.*
+
+### 🧠 3.2. Estratégia de Análise por Nível de Severidade
 
 Para cada categoria de desequilíbrio identificada, foi definida a seguinte abordagem no âmbito deste projeto:
 
