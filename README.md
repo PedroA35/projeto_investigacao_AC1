@@ -8,6 +8,17 @@
 Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto é analisar como este algoritmo se comporta em datasets desbalanceados e propor melhorias.
 
 ## 👤 Autores
+
+Este projeto foi desenvolvido por:
+
+| Membro | Curso e Número Mecanográfico | Perfil do LinkedIn |
+| :--- | :--- | :--- |
+| **Afonso Marcos** | Bioinformática FCUP / 202404088 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsomarcos20/) |
+| **Pedro Afonso** | Bioinformática FCUP / 202404125 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-afonso-282a43294/) |
+| **Artur Anselmo** | Bioinformática FCUP / 202403965 | (Link indisponível) |
+| **Marcos Torres** | Bioinformática FCUP / 202409299 | (Link indisponível) |
+
+
 * **Maria Marinho** - 202403549
 * **Pedro Afonso** - 202404125
 * **Rafael Santos** - 202405265
