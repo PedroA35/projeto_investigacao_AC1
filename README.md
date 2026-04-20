@@ -56,12 +56,6 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 
 
-
-
-
-
-
-
 ### ⚖️ 3.1. Análise Comparativa: Vantagens e Limitações
 
 A utilização do Gradient Boosting apresenta um conjunto de características fundamentais que motivaram a sua escolha:
