@@ -55,6 +55,43 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 | **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos crítico e os resultados de F1-score são mais estáveis. |
 
 
+
+
+
+
+
+
+
+### ⚖️ 3.1. Análise Comparativa: Vantagens e Limitações
+
+A utilização do Gradient Boosting apresenta um conjunto de características fundamentais que motivaram a sua escolha:
+
+* **Pontos Fortes:**
+| Característica | Explicação |
+| :--- | :--- |
+    * **Poder Preditivo:** Frequentemente oferece resultados superiores em dados tabulares devido à sua natureza aditiva.
+    * **Flexibilidade:** Permite a otimização de diferentes funções de perda (como a *LogLoss* utilizada neste projeto).
+    * **Lidabilidade com Não-Linearidade:** Capta relações complexas entre variáveis que modelos lineares ignoram.
+
+* **Limitações:**
+    * **Sensibilidade ao Ruído:** Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado alta.
+    * **Vulnerabilidade ao Desequilíbrio:** Na sua forma padrão (Fase 1), foca-se na redução do erro global, o que penaliza a classe minoritária.
+    * **Custo Computacional:** O treino é sequencial, o que o torna mais lento a processar do que modelos paralelizáveis como o *Random Forest*.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 
