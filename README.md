@@ -16,7 +16,7 @@ Este projeto foi desenvolvido por:
 | :--- | :--- | :--- | :--- |
 | **Maria Marinho** | Bioinformática FCUP / 202403549 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-duarte-marinho-a7b655348/) | [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?logo=github)](https://github.com/PedroA35) |
 | **Pedro Afonso** | Bioinformática FCUP / 202404125 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-afonso-282a43294/) | [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?logo=github)](https://github.com/PedroA35) |
-| **Rafael Santos** | Bioinformática FCUP / 202405265 | (Link indisponível) | [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?logo=github)](https://github.com/PedroA35) |
+| **Rafael Santos** | Bioinformática FCUP / 202405265 | (Link indisponível) | [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?logo=github)](https://github.com/Rafael00Santos) |
 
 
 ---
