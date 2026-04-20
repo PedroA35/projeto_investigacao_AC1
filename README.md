@@ -33,7 +33,7 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 ---
 
 
-### 🧠 2. Mecanismo de Gradient Boosting
+## 🧠 2. Mecanismo de Gradient Boosting
 Ao contrário de modelos que tentam resolver o problema de uma só vez, o **Gradient Boosting** funciona por **estágios sucessivos**:
 
 1.  **Previsão inicial:** O modelo começa com um valor base: a probabilidade média da classe nos dados de treino.
@@ -45,7 +45,7 @@ Ao contrário de modelos que tentam resolver o problema de uma só vez, o **Grad
 ---
 
 
-### ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
+## ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
 O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram calssificados, segundo a seguinte escala de severidade:
 
 | Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
@@ -58,7 +58,7 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 ---
 
 
-### 🛠️ 4. Pipeline de Tratamento de Dados
+## 🛠️ 4. Pipeline de Tratamento de Dados
 
 Para garantir que o modelo de Gradient Boosting processa corretamente os conjuntos de dados de benchmark, o script `final_assignment.py` executa um fluxo de pré-processamento rigoroso:
 
