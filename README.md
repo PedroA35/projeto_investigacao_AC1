@@ -70,31 +70,18 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
    | Característica | Explicação |
    | :--- | :--- |
-   | **Poder preditivo** | Frequentemente oferece resultados superiores em dados tabulares devido à sua natureza aditiva. |
-   | **Flexibilidade** | Permite a otimização de diferentes funções de perda (como a *LogLoss* utilizada neste projeto). |
-   | **Lidabilidade com Não-Linearidade** | Capta relações complexas entre variáveis que modelos lineares ignoram. |
+   | **Elevado poder preditivo** | Frequentemente apresenta resultados superiores em dados estruturados, devido à sua natureza aditiva. |
+   | **Flexibilidade** | Permite a otimização de diferentes funções de perda (como a *log loss* utilizada neste projeto). |
+   | **Capacidade de capturar relações não lineares** | Capta relações complexas entre variáveis que modelos lineares não conseguem representar. |
 
 
 * **Limitações:**
 
    | Característica | Explicação |
    | :--- | :--- |
-   | **Sensibilidade ao Ruído:** | Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado alta.  |
-   | **Vulnerabilidade ao Desequilíbrio:** | Na sua forma padrão (Fase 1), foca-se na redução do erro global, o que penaliza a classe minoritária. |
-   | **Custo Computacional:** | O treino é sequencial, o que o torna mais lento a processar do que modelos paralelizáveis como o *Random Forest*. |
-
-
-
-
-
-
-
-
-
-
-
-
-
+   | **Sensibilidade ao ruído** | Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado elevada.  |
+   | **Sensibilidade ao desequilíbrio** | Na sua forma padrão (Fase 1), foca-se na minimização do erro global, penalizando a classe minoritária. |
+   | **Custo computacional elevado** | O treino é sequencial, tornando-o mais lento do que modelos que permitem execução em paralelo como o *Random Forest*. |
 
 
 ---
