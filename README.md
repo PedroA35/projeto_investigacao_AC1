@@ -45,52 +45,66 @@ Ao contrário de modelos que tentam resolver o problema de uma só vez, o **Grad
 ---
 
 
-### ⚖️ 3. Escala de Dificuldade: Imbalance Ratio (IR)
-O **IR** é o indicador fundamental da dificuldade do problema, medindo a proporção entre a classe minoritária e a majoritária. Classificámos os datasets segundo a seguinte escala de severidade:
+### ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
+O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram calssificados, segundo a seguinte escala de severidade:
 
 | Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
 | :--- | :--- | :--- | :--- |
-| **Extremo** | IR < 0.05 | `yeast_ml8`, `oil_spill` | O modelo tende a ignorar a classe rara, resultando em F1-Score zero. |
-| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas sofre com elevados falsos negativos. |
-| **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos punitivo e os resultados de F1 são mais estáveis. |
+| **Extremo** | IR < 0.05 | `yeast_ml8`, `oil_spill` | O modelo tende a ignorar a classe rara, resultando num valor de F1-score muito baixo ou nulo. |
+| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas apresenta um numero elevado de falsos negativos. |
+| **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos crítico e os resultados de F1-score são mais estáveis. |
 
 
 ---
 
 
 ### 🛠️ 4. Pipeline de Tratamento de Dados
-Para garantir que o motor matemático do GBM processa corretamente os datasets de benchmark, o script `final_assignment.py` executa um fluxo de pré-processamento rigoroso:
 
-* **Label Encoding Automatizado:** Conversão dinâmica de todas as colunas de texto (categóricas) em valores numéricos, assegurando a compatibilidade com as operações de matriz do NumPy.
-* **Imputação via Moda:** Preenchimento de valores omissos utilizando a frequência estatística. Isto evita o descarte de linhas (dropna), o que seria fatal em classes que já possuem poucas amostras.
-* **Validação por Hold-out:** Separação estrita de 20% dos dados para teste. As métricas reportadas são calculadas exclusivamente nestes dados "invisíveis", garantindo a integridade da avaliação.
+Para garantir que o modelo de Gradient Boosting processa corretamente os conjuntos de dados de benchmark, o script `final_assignment.py` executa um fluxo de pré-processamento rigoroso:
 
-
----
-
-
-## 📁 Estrutura de Ficheiros
-* `gbm.py`: Contém a lógica do Gradient Boosting e funções de perda (LogLoss).
-* `tree.py`: Implementação da Árvore de Decisão (weak learner) sem dependências externas.
-* `final_assignment.py`: Script de automação que carrega os datasets da pasta `/data` e realiza:
-    * **Pré-processamento:** Tratamento de valores omissos e encoding de variáveis categóricas.
-    * **Validação:** Divisão aleatória (Hold-out 80/20) para garantir a integridade estatística dos testes.
-* `data/`: Pasta onde devem ser colocados os ficheiros `.csv`.
+- **Codificação de variáveis categóricas (Label Encoding):** Conversão automática de colunas de texto em valores numéricos, assegurando compatibilidade com operações numéricas do NumPy.
+- **Tratamento de valores em falta:** Preenchimento de valores em falta com base na moda (valor mais frequente), para variáveis categóricas, e na média, para variáveis numéricas. Esta abordagem evita a remoção de observações (*dropna*), o que seria crítico em classes minoritárias com poucas amostras.
+- **Validação hold-out:** Separação de 20% dos dados para teste. As métricas apresentadas são calculadas exclusivamente neste conjunto “invisível”, garantindo a integridade da avaliação.
 
 
 ---
 
 
-## 🛠️ Como Executar
-1. Colocar os datasets `.csv` na pasta `/data`.
-2. Instalar dependências: `pip install numpy pandas scikit-learn scipy`
-3. Correr o script principal: `python final_assignment.py`
+## 📁 5. Estrutura de Ficheiros
+* `gbm.py`: contém a lógica do Gradient Boosting e a função de perda (*log loss*).
+* `tree.py`: implementação da árvore de decisão (*weak learner*) sem dependências externas.
+* `final_assignment.py`: script de automação que carrega os conjuntos de dados da pasta `/data` e realiza:
+    * **Pré-processamento:** tratamento de valores omissos e codificação de variáveis categóricas.
+    * **Validação:** divisão aleatória (hold-out 80/20) para garantir a integridade estatística da avaliação.
+* `data/`: pasta onde devem ser colocados os ficheiros `.csv`.
+
 
 ---
 
-## 🏁 Conclusões da Fase 1
+
+## 🛠️ 6. Como Executar
+
+1. Colocar os ficheiros `.csv` na pasta `/data`.
+2. Instalar as dependências:
+   ```bash
+   pip install numpy pandas scikit-learn scipy
+3. Executar o script principal:
+   ```bash
+   python final_assignment.py
+---
+
+## 🏁 7. Conclusões da Fase 1
 
 Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao tentar minimizar a perda global (LogLoss), prioriza a classe majoritária. 
 
-* **Acurácia Inútil:** Em datasets como o `oil_spill`, atingimos acurácias superiores a 95%, mas um F1-Score nulo. Isto prova que o modelo "aprendeu" que prever sempre a classe comum é o caminho mais curto para o sucesso matemático, falhando no sucesso clínico/prático.
+* ***Accuracy* enganadora:** Em datasets como o `oil_spill`, atingimos acurácias superiores a 95%, mas um F1-Score nulo. Isto prova que o modelo "aprendeu" que prever sempre a classe comum é o caminho mais curto para o sucesso matemático, falhando no sucesso clínico/prático.
 * **Fundamentação para Melhoria:** Estes dados documentados justificam a necessidade de evoluir para uma função de custo ponderada ou ajuste de limiares, que será o foco de intervenções futuras para balancear a deteção da classe minoritária.
+
+
+
+## 🏁 7. Conclusões da Fase 1
+
+Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (log loss), tende a favorecer a classe maioritária.
+
+- **Acurácia enganadora:** Em conjuntos de dados como `oil_spill`, foram obtidas acurácias superiores a 95%, apesar de um F1-score nulo. Isto evidencia que o modelo pode otimizar a métrica global sem capturar adequadamente a classe minoritária, privilegiando a classe dominante.
+- **Fundamentação para melhorias:** Estes resultados justificam a necessidade de evoluir para abordagens como funções de custo ponderadas ou ajuste de limiares, que serão exploradas em fases futuras para melhorar a deteção da classe minoritária.
