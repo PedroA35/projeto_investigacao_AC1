@@ -38,73 +38,35 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo.
 
 ```
-[ Previsão Inicial ] 
-        |
-        v
-    ( Cálculo ) <-----------+
-    ( de Erros )            |
-        |                   |
-        v                   | (Repetir N vezes)
-    [ Treinar Nova ]        |
-    [ Árvore (GBM) ]        |
-        |                   |
-        v                   |
-    [ Atualizar ] ----------+
-    [ Previsões ]
-        |
-        v
-[ Modelo Final Robusto ]
+┌──────────────────────┐
+|   Previsão Inicial   |
+└──────────┬───────────┘
+           |
+           v
+┌──────────────────────┐
+|   Cálculo de Erros   |
+└──────────┬───────────┘
+           |            
+           v            
+┌──────────────────────┐
+|     Treinar Nova     |
+|     Árvore (GBM)     |
+└──────────┬───────────┘
+           |            
+           v            
+┌──────────────────────┐
+| Atualizar Previsões  |
+└──────────┬───────────┘
+           |
+           +-------------------+
+           |   Repetir N vezes |
+           +-------------------+
+           v
+┌──────────────────────┐
+| Modelo Final Robusto |
+└──────────────────────┘
 ```
 
-```
-                ┌──────────────────────┐
-                │   Previsão Inicial   │
-                └──────────┬───────────┘
-                           │
-                           v
-                ┌──────────────────────┐
-                │ Cálculo de Resíduos  │
-                └──────────┬───────────┘
-                           │
-                           v
-                ┌──────────────────────┐
-                │  Treino de Árvore    │
-                │   (Weak Learner)     │
-                └──────────┬───────────┘
-                           │
-                           v
-                ┌──────────────────────┐
-                │ Atualização do Modelo│
-                └──────────┬───────────┘
-                           │
-                           v
-                ┌──────────────────────┐
-                │ Melhorou? / N árvores│
-                └──────┬─────────┬─────┘
-                       │         │
-                    NÃO│         │SIM
-                       │         │
-                       v         v
-        ┌──────────────────┐   ┌────────────────┐
-        │ Repetir processo │   │ Modelo Final   │
-        └───────┬──────────┘   └────────────────┘
-                │
-                └─────── volta ao início
-```
-
-```
-[ Previsão Inicial ]
-        ↓
-[ Cálculo de Resíduos ]
-        ↓
-[ Treino de Árvore (Weak Learner) ]
-        ↓
-[ Atualização do Modelo ]
-        ↓
-        ↺  (repetir N vezes)
-        ↓
-[ Modelo Final ]
-```
 Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradient Boosting constrói o modelo de forma sequencial através de modelos simples denominados *weak learners*, geralmente árvores de decisão.
 
 O processo pode ser descrito nos seguintes passos:
