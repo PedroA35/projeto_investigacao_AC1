@@ -37,9 +37,24 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 
 O funcionamento do **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo.
 
-<p align="center">
-  <img src="docs/gradient_boosting_diagram.png" width="600">
-</p>
+```
+[ Previsão Inicial ] 
+        |
+        v
+    ( Cálculo ) <-----------+
+    ( de Erros )            |
+        |                   |
+        v                   | (Repetir N vezes)
+    [ Treinar Nova ]        |
+    [ Árvore (GBM) ]        |
+        |                   |
+        v                   |
+    [ Atualizar ] ----------+
+    [ Previsões ]
+        |
+        v
+[ Modelo Final Robusto ]
+```
 
 Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradient Boosting constrói o modelo de forma sequencial através de pequenos modelos denominados *weak learners*, geralmente árvores de decisão. O processo pode ser descrito nos seguintes passos:
 
