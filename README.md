@@ -192,8 +192,11 @@ Os resultados experimentais validam a hipótese central da investigação: o Gra
 
 
 ## 🚀 9. Próximos Passos (Fase 2)
-Embora a Fase 1 utilize um limiar de decisão fixo (0.5), observamos que em dados com IR muito baixo, a probabilidade prevista para casos raros raramente atinge esse valor. 
 
-Para a Fase 2, planeamos implementar:
-1. **Ponderação na Função de Perda:** Ajustar a *LogLoss* para penalizar mais severamente os erros na classe minoritária.
-2. **Otimização do Limiar de Decisão:** Em vez de assumir o corte em 0.5, o algoritmo irá procurar automaticamente o valor que maximiza o **G-mean**, equilibrando a deteção de ambas as classes.
+Na Fase 1, é utilizado um limiar de decisão fixo de 0.5. No entanto, em cenários com elevado desequilíbrio de classes, este valor pode não ser adequado, uma vez que o modelo tende a produzir probabilidades baixas para a classe minoritária.
+
+Para a Fase 2, propõe-se a implementação das seguintes melhorias:
+
+1. **Ponderação na função de perda:** Ajuste da *log loss* para penalizar de forma mais significativa os erros na classe minoritária, reforçando a sua importância durante o treino.
+
+2. **Otimização do limiar de decisão:** Em vez de utilizar um valor fixo de 0.5, será explorado um limiar ótimo que maximize o **G-Mean**, garantindo um melhor equilíbrio entre a deteção da classe positiva e negativa.
