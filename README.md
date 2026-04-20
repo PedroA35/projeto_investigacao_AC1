@@ -24,7 +24,7 @@ Este projeto foi desenvolvido por:
 
 ## 🎯 1. Resumo do Projeto
 
-O **Gradient Boosting Classifier** é um método de *ensemble* robusto. No entanto, apresenta frequentemente limitações em conjuntos de dados onde uma classe é significativamente mais frequente do que a outra, problema conhecido como *class imbalance*. Este trabalho explora:
+O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de múltiplos modelos) robusto. No entanto, apresenta frequentemente limitações em conjuntos de dados onde uma classe é significativamente mais frequente do que a outra, problema conhecido como *class imbalance*. Este trabalho explora:
 
 1. A implementação base do algoritmo, utilizando exclusivamente **NumPy** e **SciPy**.
 2. A avaliação experimental em conjuntos de dados de referência (*benchmark*).
