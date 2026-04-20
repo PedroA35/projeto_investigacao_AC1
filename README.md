@@ -76,9 +76,12 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
 
 * **Limitações:**
-    * **Sensibilidade ao Ruído:** Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado alta.
-    * **Vulnerabilidade ao Desequilíbrio:** Na sua forma padrão (Fase 1), foca-se na redução do erro global, o que penaliza a classe minoritária.
-    * **Custo Computacional:** O treino é sequencial, o que o torna mais lento a processar do que modelos paralelizáveis como o *Random Forest*.
+
+   | Característica | Explicação |
+   | :--- | :--- |
+   | **Sensibilidade ao Ruído:** | Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado alta.  |
+   | **Vulnerabilidade ao Desequilíbrio:** | Na sua forma padrão (Fase 1), foca-se na redução do erro global, o que penaliza a classe minoritária. |
+   | **Custo Computacional:** | O treino é sequencial, o que o torna mais lento a processar do que modelos paralelizáveis como o *Random Forest*. |
 
 
 
