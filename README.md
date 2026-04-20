@@ -34,12 +34,12 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 
 
 ### 🧠 2. Mecanismo de Gradient Boosting
-Ao contrário de modelos que tentam resolver o problema de uma só vez, o nosso Gradient Boosting funciona por **estágios sucessivos**:
+Ao contrário de modelos que tentam resolver o problema de uma só vez, o **Gradient Boosting** funciona por **estágios sucessivos**:
 
-1.  **Previsão Inicial:** O modelo começa com um valor base: a probabilidade média da classe nos dados de treino.
-2.  **Cálculo de Resíduos:** Em cada iteração, o algoritmo identifica onde errou na etapa anterior através da derivada da **LogLoss** (função de perda).
-3.  **Treino de Weak Learners:** Uma nova **Árvore de Decisão** é treinada especificamente para prever estes erros, ou resíduos, e não o valor final.
-4.  **Consolidação com Learning Rate:** Esta nova árvore é somada ao modelo acumulado, multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, garantindo que o modelo não decore os dados (overfitting), o que permite uma evolução gradual e robusta.
+1.  **Previsão inicial:** O modelo começa com um valor base: a probabilidade média da classe nos dados de treino.
+2.  **Cálculo de resíduos:** Em cada iteração, o algoritmo identifica os erros da etapa anterior, através da derivada da **log loss** (função de perda).
+3.  **Treino de modelos fracos (*weak learners*):** Uma nova **árvore de decisão** é treinada especificamente para prever estes erros (resíduos) e não o valor final.
+4.  **Atualização do modelo com taxa de aprendizagem:** Esta nova árvore é adicionada ao modelo acumulado, após ser multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, para evitar sobreajuste (overfitting), permitindo uma evolução gradual e robusta.
 
 
 ---
