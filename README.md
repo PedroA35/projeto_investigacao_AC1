@@ -103,7 +103,21 @@ Para garantir que o modelo de Gradient Boosting processa corretamente os conjunt
 ---
 
 
-## 📁 5. Estrutura de Ficheiros
+## 📊 5. Métricas de Avaliação
+
+Dada a natureza desequilibrada dos dados, o desempenho do modelo é avaliado através das seguintes métricas:
+
+| Métrica | Função | Justificação no contexto de desequilíbrio |
+| :--- | :--- | :--- |
+| **Accuracy** | Mede a percentagem global de classificações corretas. | Frequentemente enganadora; um modelo pode atingir 99% de accuracy e falhar todos os casos positivos. |
+| **F1-score** | Combinação equilibrada entre *precision* e *recall*. | Métrica principal deste trabalho, pois penaliza modelos que ignoram a classe minoritária. |
+| **Recall** | Capacidade de detetar a classe positiva. | Crucial em cenários sensíveis (ex.: diagnóstico), onde falhar um caso positivo tem elevado custo. |
+
+
+---
+
+
+## 📁 6. Estrutura de Ficheiros
 * `gbm.py`: contém a lógica do Gradient Boosting e a função de perda (*log loss*).
 * `tree.py`: implementação da árvore de decisão (*weak learner*) sem dependências externas.
 * `final_assignment.py`: script de automação que carrega os conjuntos de dados da pasta `/data` e realiza:
@@ -115,7 +129,7 @@ Para garantir que o modelo de Gradient Boosting processa corretamente os conjunt
 ---
 
 
-## 🛠️ 6. Como Executar
+## 🛠️ 7. Como Executar
 
 1. Colocar os ficheiros `.csv` na pasta `/data`.
 2. Instalar as dependências:
@@ -127,7 +141,7 @@ Para garantir que o modelo de Gradient Boosting processa corretamente os conjunt
 ---
 
 
-## 🏁 7. Conclusões da Fase 1
+## 🏁 8. Conclusões da Fase 1
 
 Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (*log loss*), tende a favorecer a classe maioritária.
 
