@@ -26,6 +26,7 @@ O **Gradient Boosting Classifier** é um método de ensemble poderoso, mas que f
 2. A avaliação experimental em datasets de benchmark.
 3. A identificação de falhas nas métricas tradicionais (como Accuracy) em cenários de desequilíbrio.
 
+---
 
 ## 📁 Estrutura de Ficheiros
 * `gbm.py`: Contém a lógica do Gradient Boosting e funções de perda (LogLoss).
@@ -34,6 +35,8 @@ O **Gradient Boosting Classifier** é um método de ensemble poderoso, mas que f
     * **Pré-processamento:** Tratamento de valores omissos e encoding de variáveis categóricas.
     * **Validação:** Divisão aleatória (Hold-out 80/20) para garantir a integridade estatística dos testes.
 * `data/`: Pasta onde devem ser colocados os ficheiros `.csv`.
+
+---
 
 ## 🛠️ Como Executar
 1. Colocar os datasets `.csv` na pasta `/data`.
