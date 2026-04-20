@@ -5,7 +5,7 @@
 
 ---
 
-Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I. O foco do projeto é analisar como este algoritmo se comporta em datasets desbalanceados e propor melhorias.
+Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto é analisar como este algoritmo se comporta em datasets desbalanceados e propor melhorias.
 
 ## 👤 Autores
 * **Maria Marinho** - 202403549
