@@ -61,6 +61,7 @@ O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual 
            +-------------------+
            |   Repetir N vezes |
            +-------------------+
+           |
            v
 ┌──────────────────────┐
 | Modelo Final Robusto |
