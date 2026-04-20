@@ -13,7 +13,7 @@ Este projeto foi desenvolvido por:
 
 | Membro | Curso e Número Mecanográfico | Perfil do LinkedIn |
 | :--- | :--- | :--- |
-| **Maria Marinho** | Bioinformática FCUP / 202403549 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsomarcos20/) |
+| **Maria Marinho** | Bioinformática FCUP / 202403549 | (Link indisponível) |
 | **Pedro Afonso** | Bioinformática FCUP / 202404125 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-afonso-282a43294/) |
 | **Rafael Santos** | Bioinformática FCUP / 202405265 | (Link indisponível) |
 
