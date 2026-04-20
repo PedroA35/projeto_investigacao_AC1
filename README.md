@@ -79,15 +79,14 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 ### 3.1. Estratégia de Análise por Nível de Severidade
 
-Para cada categoria de desequilíbrio identificada, definimos a seguinte abordagem no âmbito deste projeto:
+Para cada categoria de desequilíbrio identificada, foi definida a seguinte abordagem no âmbito deste projeto:
 
    | Categoria | Abordagem |
    | :--- | :--- |
-   | **Datasets de IR Extremo** | O foco reside na monitorização do **F1-Score**. Nestes casos, esperamos que o modelo base falhe totalmente (F1 = 0), servindo como o *baseline* crítico para futuras melhorias. |
-   | **Datasets de IR Moderado** | Analisamos o compromisso (*trade-off*) entre **Precision** e **Recall**. O objetivo é perceber se o modelo consegue identificar alguns casos raros sem gerar demasiados falsos positivos. |
-   | **Datasets de IR Suave** | Utilizamos estes dados para validar a integridade da implementação. Se o algoritmo não performar bem aqui, indica problemas na lógica base e não apenas no desequilíbrio. |
+   | **Conjunto de dados de IR extremo** | O foco reside na monitorização do **F1-Score**. Nestes casos, espera-se que o modelo base falhe (F1 ≈ 0), servindo como *baseline* para futuras melhorias. |
+   | **Conjunto de dados de IR moderado** | Analsa-se o compromisso (*trade-off*) entre **precision** e **recall**. O objetivo é avaliar se o modelo consegue identificar casos raros sem gerar um número excessivo de falsos positivos. |
+   | **Conjunto de dados de IR suave** | Estes dados são utilizados para validar a integridade da implementação. Um desempenho fraco neste contexto pode indicar problemas na lógica do modelo, e não apenas efeitos do desequilíbrio. |
    
-
 
 ---
 
