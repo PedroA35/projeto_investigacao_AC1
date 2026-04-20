@@ -123,15 +123,15 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 A avaliação foi realizada em conjuntos de dados reais de diferentes domínios (medicina, biologia e engenharia), apresentando vários níveis de desequilíbrio entre classes (IR).
 
-| Dataset | Domínio | IR | Dificuldade Esperada |
+| Conjunto de dados | Domínio | IR | Dificuldade Esperada |
 | :--- | :--- | :--- | :--- |
-| `yeast_ml8` | Biologia | 0.014 | Extrema |
-| `arsenic-ml` | Saúde Pública | 0.024 | Extrema |
-| `oil_spill` | Ambiente | 0.046 | Extrema |
-| `sick` | Medicina | 0.066 | Moderada |
-| `hypothyroid` | Medicina | 0.085 | Moderada |
-| `backache` | Medicina | 0.161 | Suave |
-| `chlamydia` | Saúde Pública | 0.235 | Suave |
+| `aaaaa` | Área | 0.000 | Extrema |
+| `aaaaa` | Área | 0.000 | Extrema |
+| `aaaaa` | Área | 0.000 | Extrema |
+| `aaaaa` | Área | 0.000 | Moderada |
+| `aaaaa` | Área | 0.000 | Moderada |
+| `aaaaa` | Área | 0.000 | Suave |
+| `aaaaa` | Área | 0.000 | Suave |
 
 *Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.*
 
