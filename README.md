@@ -5,7 +5,8 @@
 
 ---
 
-Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto é analisar como este algoritmo se comporta em datasets desbalanceados e propor melhorias.
+Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto incide na análise do comportamento dete algoritmo em conjuntos de dados desequilibrados, bem como na proposta de melhorias estruturais.
+
 
 ## 👤 Autores
 
@@ -22,11 +23,12 @@ Este projeto foi desenvolvido por:
 
 
 ## 🎯 1. Resumo do Projeto
-O **Gradient Boosting Classifier** é um método de ensemble poderoso, mas que frequentemente sofre em datasets onde uma classe é muito mais frequente que a outra (Class Imbalance). Este trabalho explora:
-1. A implementação base do algoritmo usando apenas **NumPy** e **SciPy**.
-2. A avaliação experimental em datasets de benchmark.
-3. A identificação de falhas nas métricas tradicionais (como Accuracy) em cenários de desequilíbrio.
 
+O **Gradient Boosting Classifier** é um método de *ensemble* robusto. No entanto, apresenta frequentemente limitações em conjuntos de dados onde uma classe é significativamente mais frequente do que a outra, problema conhecido como *class imbalance*. Este trabalho explora:
+
+1. A implementação base do algoritmo, utilizando exclusivamente **NumPy** e **SciPy**.
+2. A avaliação experimental em conjuntos de dados de referência (*benchmark*).
+3. A identificação de limitações das métricas tradicionais, como a *accuracy*, em cenários de desequilíbrio acentuado.
 
 ---
 
