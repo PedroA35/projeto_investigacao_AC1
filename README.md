@@ -1,5 +1,7 @@
 # Gradient Boosting Classifier: Lidar com o Desequilíbrio de Classes
 
+**UC:** Aprendizagem Computacional I — Universidade do Porto  
+
 
 ---
 
@@ -9,7 +11,6 @@ Este repositório contém a implementação "from scratch" do algoritmo **Gradie
 * **Maria Marinho** - 202403549
 * **Pedro Afonso** - 202404125
 * **Rafael Santos** - 202405265
-**UC:** Aprendizagem Computacional I — Universidade do Porto  
 
 ---
 
