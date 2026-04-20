@@ -44,18 +44,19 @@ O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual 
            |
            v
 ┌──────────────────────┐
-|   Cálculo de Erros   |
+|  Cálculo de Resíduos |
 └──────────┬───────────┘
            |            
            v            
 ┌──────────────────────┐
-|     Treinar Nova     |
-|     Árvore (GBM)     |
+|    Treinar Árvore    |
+|    (Weak Learner)    |
 └──────────┬───────────┘
            |            
            v            
 ┌──────────────────────┐
-| Atualizar Previsões  |
+|    Atualização do    |
+|        Modelo        |
 └──────────┬───────────┘
            |
            +-------------------+
@@ -64,7 +65,7 @@ O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual 
            |
            v
 ┌──────────────────────┐
-| Modelo Final Robusto |
+|     Modelo Final     |
 └──────────────────────┘
 ```
 
