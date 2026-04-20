@@ -42,21 +42,7 @@ Ao contrário de modelos que tentam resolver o problema de uma só vez, o **Grad
 4.  **Atualização do modelo com taxa de aprendizagem:** Esta nova árvore é adicionada ao modelo acumulado, após ser multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, para evitar sobreajuste (overfitting), permitindo uma evolução gradual e robusta.
 
 
----
-
-
-## ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
-O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram calssificados, segundo a seguinte escala de severidade:
-
-| Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
-| :--- | :--- | :--- | :--- |
-| **Extremo** | IR < 0.05 | `yeast_ml8`, `oil_spill` | O modelo tende a ignorar a classe rara, resultando num valor de F1-score muito baixo ou nulo. |
-| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas apresenta um numero elevado de falsos negativos. |
-| **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos crítico e os resultados de F1-score são mais estáveis. |
-
-
-
-### ⚖️ 3.1. Análise Comparativa: Vantagens e Limitações
+### ⚖️ 2.1. Análise Comparativa: Vantagens e Limitações
 
 A utilização do Gradient Boosting apresenta um conjunto de características fundamentais que motivaram a sua escolha:
 
@@ -76,6 +62,20 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
    | **Sensibilidade ao ruído** | Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado elevada. |
    | **Sensibilidade ao desequilíbrio** | Na sua forma padrão (Fase 1), foca-se na minimização do erro global, penalizando a classe minoritária. |
    | **Custo computacional elevado** | O treino é sequencial, tornando-o mais lento do que modelos que permitem execução em paralelo, como o *Random Forest*. |
+
+
+---
+
+
+## ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
+O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram calssificados, segundo a seguinte escala de severidade:
+
+| Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
+| :--- | :--- | :--- | :--- |
+| **Extremo** | IR < 0.05 | `yeast_ml8`, `oil_spill` | O modelo tende a ignorar a classe rara, resultando num valor de F1-score muito baixo ou nulo. |
+| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas apresenta um numero elevado de falsos negativos. |
+| **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos crítico e os resultados de F1-score são mais estáveis. |
+
 
 
 ---
