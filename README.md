@@ -35,7 +35,7 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 
 ## 🧠 2. Mecanismo de Gradient Boosting
 
-O funcionamento do **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo.
+O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo.
 
 ```
 [ Previsão Inicial ] 
@@ -56,14 +56,53 @@ O funcionamento do **Gradient Boosting** baseia-se num processo iterativo de cor
 [ Modelo Final Robusto ]
 ```
 
-Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradient Boosting constrói o modelo de forma sequencial através de pequenos modelos denominados *weak learners*, geralmente árvores de decisão. O processo pode ser descrito nos seguintes passos:
+```
+                ┌──────────────────────┐
+                │   Previsão Inicial   │
+                └──────────┬───────────┘
+                           │
+                           v
+                ┌──────────────────────┐
+                │ Cálculo de Resíduos  │
+                └──────────┬───────────┘
+                           │
+                           v
+                ┌──────────────────────┐
+                │ Treino de Árvore     │
+                │ (Weak Learner)       │
+                └──────────┬───────────┘
+                           │
+                           v
+                ┌──────────────────────┐
+                │ Atualização do Modelo│
+                └──────────┬───────────┘
+                           │
+                           v
+                ┌──────────────────────┐
+                │ Melhorou? / N árvores│
+                └──────┬─────────┬─────┘
+                       │         │
+                    NÃO│         │SIM
+                       │         │
+                       v         v
+        ┌──────────────────┐   ┌────────────────┐
+        │ Repetir processo │   │ Modelo Final   │
+        └───────┬──────────┘   └────────────────┘
+                │
+                └─────── volta ao início
+```
 
-1.  **Previsão inicial:** O modelo começa com um valor base: a probabilidade média da classe nos dados de treino.
-2.  **Cálculo de resíduos:** Em cada iteração, o algoritmo identifica os erros da etapa anterior, através da derivada da **log loss** (função de perda).
-3.  **Treino de modelos fracos (*weak learners*):** Uma nova **árvore de decisão** é treinada especificamente para prever estes erros (resíduos) e não o valor final.
-4.  **Atualização do modelo com taxa de aprendizagem:** Esta nova árvore é adicionada ao modelo acumulado, após ser multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, para evitar sobreajuste (overfitting), permitindo uma evolução gradual e robusta.
 
-Este processo repete-se de forma iterativa até atingir o número definido de árvores ou até que a melhoria marginal seja reduzida.
+Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradient Boosting constrói o modelo de forma sequencial através de modelos simples denominados *weak learners*, geralmente árvores de decisão.
+
+O processo pode ser descrito nos seguintes passos:
+
+1.  **Previsão inicial:** O modelo começa com uma estimativa base: a probabilidade média da classe nos dados de treino.
+2.  **Cálculo de resíduos:** Em cada iteração, são calculados os erros do modelo atual, com base na função de perda (*log loss*).
+3.  **Treino de modelos fracos (*weak learners*):** Uma nova **árvore de decisão** é treinada para aprender a corrigir estes erros (resíduos) e não o valor final.
+4.  **Atualização do modelo com taxa de aprendizagem:** A nova árvore é adicionada ao modelo existente, ponderada pela taxa de aprendizagem (*learning rate*), controlando o impacto de cada iteração e ajudando a evitar *overfitting*.
+
+Este processo repete-se até atingir o número definido de árvores ou até que a melhoria marginal do modelo se torne reduzida.
 
 
 ### ⚖️ 2.1. Análise Comparativa: Vantagens e Limitações
