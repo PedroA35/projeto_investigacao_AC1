@@ -119,8 +119,6 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 ### 📊 3.1. Caracterização dos Datasets de Benchmark 
 
-### 3.1. Caracterização dos Datasets de Benchmark
-
 A avaliação foi realizada em conjuntos de dados reais de diferentes domínios (medicina, biologia e engenharia), apresentando vários níveis de desequilíbrio entre classes (IR).
 
 | Conjunto de dados | Domínio | IR | Dificuldade Esperada |
