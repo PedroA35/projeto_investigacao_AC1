@@ -41,6 +41,33 @@ Ao contrário de modelos que tentam resolver o problema de uma só vez, o **Grad
 3.  **Treino de modelos fracos (*weak learners*):** Uma nova **árvore de decisão** é treinada especificamente para prever estes erros (resíduos) e não o valor final.
 4.  **Atualização do modelo com taxa de aprendizagem:** Esta nova árvore é adicionada ao modelo acumulado, após ser multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, para evitar sobreajuste (overfitting), permitindo uma evolução gradual e robusta.
 
+"O funcionamento do algoritmo baseia-se num processo iterativo de correção, onde cada novo modelo tenta minimizar os erros cometidos pelo conjunto de modelos anteriores. Este ciclo de aprendizagem foca-se na direção do gradiente da função de perda (descida do gradiente), conforme ilustrado abaixo:"
+O funcionamento do algoritmo baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo, conforme ilustrado abaixo:
+
+## 🧠 2. Mecanismo de Gradient Boosting
+
+O funcionamento do **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo.
+
+<p align="center">
+  <img src="docs/gradient_boosting_diagram.png" width="600">
+</p>
+
+Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradient Boosting constrói o modelo de forma sequencial através de pequenos modelos denominados *weak learners*, geralmente árvores de decisão. O processo pode ser descrito nos seguintes passos:
+
+1. **Previsão inicial:**  
+   O modelo começa com uma estimativa base, normalmente a probabilidade média da classe nos dados de treino.
+
+2. **Cálculo dos erros (resíduos):**  
+   Em cada iteração, são calculados os erros do modelo atual através da derivada da função de perda (*log loss*).
+
+3. **Treino de modelos fracos (*weak learners*):**  
+   Uma nova árvore de decisão é treinada para aprender a corrigir os erros (resíduos) do modelo anterior.
+
+4. **Atualização do modelo:**  
+   O novo modelo é adicionado ao conjunto existente, ponderado pela taxa de aprendizagem (*learning rate*), controlando a contribuição de cada árvore.
+
+Este processo repete-se de forma iterativa até atingir o número definido de árvores ou até que a melhoria marginal seja reduzida.
+
 
 ### ⚖️ 2.1. Análise Comparativa: Vantagens e Limitações
 
