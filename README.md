@@ -67,8 +67,11 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 A utilização do Gradient Boosting apresenta um conjunto de características fundamentais que motivaram a sua escolha:
 
 * **Pontos Fortes:**
+
 | Característica | Explicação |
 | :--- | :--- |
+| **Poder preditivo** | AAA |
+
     * **Poder Preditivo:** Frequentemente oferece resultados superiores em dados tabulares devido à sua natureza aditiva.
     * **Flexibilidade:** Permite a otimização de diferentes funções de perda (como a *LogLoss* utilizada neste projeto).
     * **Lidabilidade com Não-Linearidade:** Capta relações complexas entre variáveis que modelos lineares ignoram.
