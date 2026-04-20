@@ -36,6 +36,17 @@ Ao contrário de modelos que tentam resolver o problema de uma só vez, o nosso 
 3.  **Treino de Weak Learners:** Uma nova **Árvore de Decisão** é treinada especificamente para prever estes erros, ou resíduos, e não o valor final.
 4.  **Consolidação com Learning Rate:** Esta nova árvore é somada ao modelo acumulado, multiplicada por uma taxa de aprendizagem (*learning rate*). Este passo é fundamental, garantindo que o modelo não decore os dados (overfitting), o que permite uma evolução gradual e robusta.
 
+---
+
+### ⚖️ Escala de Dificuldade: Imbalance Ratio (IR)
+O **IR** é o indicador fundamental da dificuldade do problema, medindo a proporção entre a classe minoritária e a majoritária. Classificámos os datasets segundo a seguinte escala de severidade:
+
+| Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
+| :--- | :--- | :--- | :--- |
+| **Extremo** | IR < 0.05 | `yeast_ml8`, `oil_spill` | O modelo tende a ignorar a classe rara, resultando em F1-Score zero. |
+| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas sofre com elevados falsos negativos. |
+| **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos punitivo e os resultados de F1 são mais estáveis. |
+
 
 
 ---
