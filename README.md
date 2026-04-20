@@ -35,7 +35,7 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 
 ## 🧠 2. Mecanismo de Gradient Boosting
 
-O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros cometidos pelo conjunto de modelos anteriores. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do modelo.
+O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros do modelo agregado anterior. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do desempenho.
 
 ```
 ┌──────────────────────┐
@@ -73,10 +73,10 @@ Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradie
 
 O processo pode ser descrito nos seguintes passos:
 
-1.  **Previsão inicial:** O modelo começa com uma estimativa base: a probabilidade média da classe nos dados de treino.
+1.  **Previsão inicial:** O modelo começa com uma estimativa base, geralmente a probabilidade média da classe nos dados de treino.
 2.  **Cálculo de resíduos:** Em cada iteração, são calculados os erros do modelo atual, com base na função de perda (*log loss*).
-3.  **Treino de modelos fracos (*weak learners*):** Uma nova **árvore de decisão** é treinada para aprender a corrigir estes erros (resíduos) e não o valor final.
-4.  **Atualização do modelo com taxa de aprendizagem:** A nova árvore é adicionada ao modelo existente, ponderada pela taxa de aprendizagem (*learning rate*), controlando o impacto de cada iteração e ajudando a evitar *overfitting*.
+3.  **Treino de modelos fracos (*weak learners*):** Uma nova árvore de decisão é treinada para aprender a corrigir esses resíduos.
+4.  **Atualização do modelo:** A nova árvore é adicionada ao modelo existente, ponderada pela taxa de aprendizagem (*learning rate*), controlando a contribuição de cada iteração e ajudando a evitar *overfitting*.
 
 Este processo repete-se até atingir o número definido de árvores ou até que a melhoria marginal do modelo se torne reduzida.
 
