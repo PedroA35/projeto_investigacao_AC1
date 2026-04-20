@@ -70,11 +70,10 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
    | Característica | Explicação |
    | :--- | :--- |
-   | **Poder preditivo** | AAA |
+   | **Poder preditivo** | Frequentemente oferece resultados superiores em dados tabulares devido à sua natureza aditiva. |
+   | **Flexibilidade** | Permite a otimização de diferentes funções de perda (como a *LogLoss* utilizada neste projeto). |
+   | **Lidabilidade com Não-Linearidade** | Capta relações complexas entre variáveis que modelos lineares ignoram. |
 
-    * **Poder Preditivo:** Frequentemente oferece resultados superiores em dados tabulares devido à sua natureza aditiva.
-    * **Flexibilidade:** Permite a otimização de diferentes funções de perda (como a *LogLoss* utilizada neste projeto).
-    * **Lidabilidade com Não-Linearidade:** Capta relações complexas entre variáveis que modelos lineares ignoram.
 
 * **Limitações:**
     * **Sensibilidade ao Ruído:** Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado alta.
