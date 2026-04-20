@@ -151,7 +151,7 @@ Dada a natureza desequilibrada dos dados, o desempenho do modelo é avaliado atr
 | **Accuracy** | Mede a percentagem global de classificações corretas. | Frequentemente enganadora; um modelo pode atingir 99% de accuracy e falhar todos os casos positivos. |
 | **F1-score** | Combinação equilibrada entre *precision* e *recall*. | Métrica principal deste trabalho, pois penaliza modelos que ignoram a classe minoritária. |
 | **Recall** | Capacidade de detetar a classe positiva. | Crucial em cenários sensíveis (ex.: diagnóstico), onde falhar um caso positivo tem elevado custo. |
-
+| **G-Mean** | Média geométrica entre *recall* da classe positiva e negativa. | Mede o equilíbrio entre classes, penalizando modelos enviesados para a classe maioritária e sendo especialmente útil em problemas de *class imbalance*. |
 
 ---
 
@@ -186,3 +186,14 @@ Os resultados experimentais validam a hipótese central da investigação: o Gra
 
 - ***Accuracy* enganadora:** Em conjuntos de dados como `oil_spill`, foram obtidos *accuracy values* superiores a 95%, apesar de um F1-score nulo. Isto evidencia que o modelo pode otimizar a métrica global sem capturar adequadamente a classe minoritária, privilegiando a classe dominante.
 - **Fundamentação para melhorias:** Estes resultados justificam a necessidade de evoluir para abordagens como funções de custo ponderadas ou ajuste de limiares, que serão exploradas em fases futuras para melhorar a deteção da classe minoritária.
+
+
+---
+
+
+## 🚀 9. Próximos Passos (Fase 2)
+Embora a Fase 1 utilize um limiar de decisão fixo (0.5), observamos que em dados com IR muito baixo, a probabilidade prevista para casos raros raramente atinge esse valor. 
+
+Para a Fase 2, planeamos implementar:
+1. **Ponderação na Função de Perda:** Ajustar a *LogLoss* para penalizar mais severamente os erros na classe minoritária.
+2. **Otimização do Limiar de Decisão:** Em vez de assumir o corte em 0.5, o algoritmo irá procurar automaticamente o valor que maximiza o **G-mean**, equilibrando a deteção de ambas as classes.
