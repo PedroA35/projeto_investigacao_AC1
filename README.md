@@ -68,8 +68,8 @@ O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual 
                            │
                            v
                 ┌──────────────────────┐
-                │ Treino de Árvore     │
-                │ (Weak Learner)       │
+                │  Treino de Árvore    │
+                │   (Weak Learner)     │
                 └──────────┬───────────┘
                            │
                            v
@@ -92,7 +92,19 @@ O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual 
                 └─────── volta ao início
 ```
 
-
+```
+[ Previsão Inicial ]
+        ↓
+[ Cálculo de Resíduos ]
+        ↓
+[ Treino de Árvore (Weak Learner) ]
+        ↓
+[ Atualização do Modelo ]
+        ↓
+        ↺  (repetir N vezes)
+        ↓
+[ Modelo Final ]
+```
 Ao contrário de modelos que tentam resolver o problema de uma só vez, o Gradient Boosting constrói o modelo de forma sequencial através de modelos simples denominados *weak learners*, geralmente árvores de decisão.
 
 O processo pode ser descrito nos seguintes passos:
