@@ -1,12 +1,18 @@
-# projeto_investigacao_AC1
-
 # Gradient Boosting Classifier: Lidar com o Desequilíbrio de Classes
+
+
+---
 
 Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I. O foco do projeto é analisar como este algoritmo se comporta em datasets desbalanceados e propor melhorias.
 
-## 👤 Identificação
-* **Teu Nome** - [Teu Número de Aluno]
-* **Unidade Curricular:** Aprendizagem Computacional I (AC1)
+## 👤 Autores
+* **Maria Marinho** - 202403549
+* **Pedro Afonso** - 202404125
+* **Rafael Santos** - 202405265
+**UC:** Aprendizagem Computacional I — Universidade do Porto  
+
+---
+
 
 ## 🎯 Resumo do Projeto
 O Gradient Boosting é um método de ensemble poderoso, mas que frequentemente sofre em datasets onde uma classe é muito mais frequente que a outra (Class Imbalance). Este trabalho explora:
