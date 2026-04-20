@@ -68,9 +68,9 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
 * **Pontos Fortes:**
 
-| Característica | Explicação |
-| :--- | :--- |
-| **Poder preditivo** | AAA |
+   | Característica | Explicação |
+   | :--- | :--- |
+   | **Poder preditivo** | AAA |
 
     * **Poder Preditivo:** Frequentemente oferece resultados superiores em dados tabulares devido à sua natureza aditiva.
     * **Flexibilidade:** Permite a otimização de diferentes funções de perda (como a *LogLoss* utilizada neste projeto).
