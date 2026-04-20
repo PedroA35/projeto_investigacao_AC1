@@ -66,7 +66,7 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 A utilização do Gradient Boosting apresenta um conjunto de características fundamentais que motivaram a sua escolha:
 
-* **Pontos Fortes:**
+* **Pontos fortes:**
 
    | Característica | Explicação |
    | :--- | :--- |
@@ -79,9 +79,9 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
    | Característica | Explicação |
    | :--- | :--- |
-   | **Sensibilidade ao ruído** | Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado elevada.  |
+   | **Sensibilidade ao ruído** | Pode sofrer de *overfitting* se o número de árvores for excessivo ou a taxa de aprendizagem demasiado elevada. |
    | **Sensibilidade ao desequilíbrio** | Na sua forma padrão (Fase 1), foca-se na minimização do erro global, penalizando a classe minoritária. |
-   | **Custo computacional elevado** | O treino é sequencial, tornando-o mais lento do que modelos que permitem execução em paralelo como o *Random Forest*. |
+   | **Custo computacional elevado** | O treino é sequencial, tornando-o mais lento do que modelos que permitem execução em paralelo, como o *Random Forest*. |
 
 
 ---
