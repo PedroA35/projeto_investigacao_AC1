@@ -68,7 +68,7 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
 
 ## ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
-O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram calssificados, segundo a seguinte escala de severidade:
+O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram classificados, segundo a seguinte escala de severidade:
 
 | Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
 | :--- | :--- | :--- | :--- |
