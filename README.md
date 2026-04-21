@@ -30,6 +30,9 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 2. A avaliação experimental em conjuntos de dados de referência (*benchmark*).
 3. A identificação de limitações das métricas tradicionais, como a *accuracy*, em cenários de desequilíbrio acentuado.
 
+
+> Nota: Ao longo deste documento, os termos *classe minoritária*, *classe rara* e *classe positiva* são utilizados de forma equivalente.
+
 ---
 
 
@@ -134,7 +137,7 @@ A avaliação foi realizada em conjuntos de dados reais de diferentes domínios 
 | `aaaaa` | Área | 0.000 | Suave |
 | `aaaaa` | Área | 0.000 | Suave |
 
-*Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.*
+> Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.
 
 ### 🧠 3.2. Estratégia de Análise por Nível de Severidade
 
