@@ -5,7 +5,7 @@
 
 ---
 
-Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto incide na análise do comportamento dete algoritmo em conjuntos de dados desequilibrados, bem como na proposta de melhorias estruturais.
+Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto incide na análise do comportamento deste algoritmo em conjuntos de dados desequilibrados, bem como na proposta de melhorias estruturais.
 
 
 ## 👤 Autores
@@ -112,7 +112,7 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 | Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
 | :--- | :--- | :--- | :--- |
 | **Extremo** | IR < 0.05 | `yeast_ml8`, `oil_spill` | O modelo tende a ignorar a classe rara, resultando num valor de F1-score muito baixo ou nulo. |
-| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas apresenta um numero elevado de falsos negativos. |
+| **Moderado** | 0.05 < IR < 0.15 | `hypothyroid`, `sick` | O modelo identifica alguns padrões, mas apresenta um número elevado de falsos negativos. |
 | **Suave** | IR > 0.15 | `backache`, `chlamydia` | O desequilíbrio é menos crítico e os resultados de F1-score são mais estáveis. |
 
 
@@ -140,7 +140,7 @@ Para cada categoria de desequilíbrio identificada, foi definida a seguinte abor
    | Categoria | Abordagem |
    | :--- | :--- |
    | **Conjunto de dados de IR extremo** | O foco reside na monitorização do **F1-Score**. Nestes casos, espera-se que o modelo base falhe (F1 ≈ 0), servindo como *baseline* para futuras melhorias. |
-   | **Conjunto de dados de IR moderado** | Analsa-se o compromisso (*trade-off*) entre **precision** e **recall**. O objetivo é avaliar se o modelo consegue identificar casos raros sem gerar um número excessivo de falsos positivos. |
+   | **Conjunto de dados de IR moderado** | Analisa-se o compromisso (*trade-off*) entre **precision** e **recall**. O objetivo é avaliar se o modelo consegue identificar casos raros sem gerar um número excessivo de falsos positivos. |
    | **Conjunto de dados de IR suave** | Estes dados são utilizados para validar a integridade da implementação. Um desempenho fraco neste contexto pode indicar problemas na lógica do modelo, e não apenas efeitos do desequilíbrio. |
    
 
@@ -162,12 +162,11 @@ A avaliação do algoritmo foi estruturada de forma a garantir a fiabilidade dos
 
 Para avaliar o impacto do desequilíbrio de classes, foi definido o seguinte protocolo experimental:
 
-- **Divisão de dados:** Utilização do método *hold-out* (80% treino / 20% teste).
-- **Repetições:** Cada experiência foi executada 5 vezes com diferentes sementes aleatórias, sendo reportada a média dos resultados.
-- **Métricas de avaliação:** Dado o foco em *class imbalance*, foram utilizadas:
-  - **F1-score:** Avalia o equilíbrio entre *precision* e *recall* na classe minoritária.
-  - **G-Mean:** Mede o equilíbrio entre o desempenho nas duas classes.
-  - **Accuracy:** Incluída apenas para ilustrar o seu caráter potencialmente enganador em dados desequilibrados.
+- **Divisão dos dados:** Aplicação do método *hold-out* (80% treino / 20% teste).
+- **Execuções repetidas:** Cada experiência foi repetida 5 vezes com diferentes sementes aleatórias, sendo considerados os valores médios.
+- **Objetivo da avaliação:** Analisar o impacto do desequilíbrio de classes no desempenho do modelo base, em diferentes níveis de severidade (IR).
+
+> Nota: As métricas utilizadas encontram-se descritas na Secção 5.
 
 
 
@@ -176,6 +175,7 @@ Para avaliar o impacto do desequilíbrio de classes, foi definido o seguinte pro
 - **Codificação de variáveis categóricas:** Aplicação de *Label Encoding* para conversão de variáveis categóricas em formato numérico.
 - **Tratamento de valores em falta:** Imputação através da moda (variáveis categóricas) e média (variáveis numéricas).
 - **Ambiente de execução:** O código foi desenvolvido e testado em ambiente Jupyter Notebook, garantindo reprodutibilidade experimental.
+
 
 ---
 
