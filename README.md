@@ -1,11 +1,8 @@
 # Gradient Boosting Classifier: Lidar com o Desequilíbrio de Classes
 
-**UC:** Aprendizagem Computacional I — Universidade do Porto  
-
-
 ---
 
-Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto incide na análise do comportamento deste algoritmo em conjuntos de dados desequilibrados, bem como na proposta de melhorias estruturais.
+Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008) da Faculdade de Ciências da Universidade do Porto. O foco do projeto incide na análise do comportamento deste algoritmo em conjuntos de dados desequilibrados, bem como na proposta de melhorias estruturais.
 
 
 ## Autores
