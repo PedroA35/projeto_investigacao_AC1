@@ -8,7 +8,7 @@
 Este repositório contém a implementação "from scratch" do algoritmo **Gradient Boosting Classifier**, desenvolvida para a unidade curricular de Aprendizagem Computacional I (CC2008). O foco do projeto incide na análise do comportamento deste algoritmo em conjuntos de dados desequilibrados, bem como na proposta de melhorias estruturais.
 
 
-## 👤 Autores
+## Autores
 
 Este projeto foi desenvolvido por:
 
@@ -22,7 +22,7 @@ Este projeto foi desenvolvido por:
 ---
 
 
-## 🎯 1. Resumo do Projeto
+## 1. Resumo do Projeto
 
 O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de múltiplos modelos) robusto. No entanto, apresenta frequentemente limitações em conjuntos de dados onde uma classe é significativamente mais frequente do que a outra, problema conhecido como *class imbalance*. Este trabalho explora:
 
@@ -36,7 +36,7 @@ O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de 
 ---
 
 
-## 🧠 2. Mecanismo de Gradient Boosting
+## 2. Mecanismo de Gradient Boosting
 
 O **Gradient Boosting** baseia-se num processo iterativo de correção, no qual cada novo modelo é treinado para reduzir os erros do modelo agregado anterior. Este processo segue a direção do gradiente da função de perda (descida do gradiente), permitindo uma otimização progressiva do desempenho.
 
@@ -84,7 +84,7 @@ O processo pode ser descrito nos seguintes passos:
 Este processo repete-se até atingir o número definido de árvores ou até que a melhoria marginal do modelo se torne reduzida.
 
 
-### ⚖️ 2.1. Análise Comparativa: Vantagens e Limitações
+### 2.1. Análise Comparativa: Vantagens e Limitações
 
 A utilização do Gradient Boosting apresenta um conjunto de características fundamentais que motivaram a sua escolha:
 
@@ -109,7 +109,7 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 ---
 
 
-## ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
+## 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
 
 Após compreender o funcionamento do modelo, é fundamental analisar o contexto em que este será aplicado. Neste projeto, o principal desafio reside no desequilíbrio de classes, o qual é quantificado através do *Imbalance Ratio* (IR).
 
@@ -123,7 +123,7 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 
 
-### 📊 3.1. Caracterização dos Datasets de Benchmark 
+### 3.1. Caracterização dos Datasets de Benchmark 
 
 A avaliação foi realizada em conjuntos de dados reais de diferentes domínios (medicina, biologia e engenharia), apresentando vários níveis de desequilíbrio entre classes (IR).
 
@@ -139,7 +139,7 @@ A avaliação foi realizada em conjuntos de dados reais de diferentes domínios 
 
 > Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.
 
-### 🧠 3.2. Estratégia de Análise por Nível de Severidade
+### 3.2. Estratégia de Análise por Nível de Severidade
 
 Para cada categoria de desequilíbrio identificada, foi definida a seguinte abordagem no âmbito deste projeto:
 
@@ -156,7 +156,7 @@ Com base nesta caracterização, foi definida uma metodologia experimental adequ
 ---
 
 
-## 🛠️ 4. Metodologia Experimental
+## 4. Metodologia Experimental
 
 A avaliação do algoritmo foi estruturada de forma a garantir a fiabilidade dos resultados e a consistência da análise em cenários de desequilíbrio de classes.
 
@@ -189,7 +189,7 @@ Para avaliar o impacto do desequilíbrio de classes, foi definido o seguinte pro
 ---
 
 
-## 📊 5. Métricas de Avaliação
+## 5. Métricas de Avaliação
 
 Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram utilizadas métricas adequadas a problemas com desequilíbrio de classes.
 
@@ -203,7 +203,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 ---
 
 
-## 📁 6. Estrutura de Ficheiros
+## 6. Estrutura de Ficheiros
 * `gbm.py`: contém a lógica do Gradient Boosting e a função de perda (*log loss*).
 * `tree.py`: implementação da árvore de decisão (*weak learner*) sem dependências externas.
 * `final_assignment.py`: script de automação que carrega os conjuntos de dados da pasta `/data` e realiza:
@@ -215,7 +215,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 ---
 
 
-## 🛠️ 7. Como Executar
+## 7. Como Executar
 
 1. Colocar os ficheiros `.csv` na pasta `/data`.
 2. Instalar as dependências:
@@ -227,7 +227,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 ---
 
 
-## 🏁 8. Conclusões da Fase 1
+## 8. Conclusões da Fase 1
 
 Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (*log loss*), tende a favorecer a classe maioritária.
 
@@ -238,7 +238,7 @@ Os resultados experimentais validam a hipótese central da investigação: o Gra
 ---
 
 
-## 🚀 9. Próximos Passos (Fase 2)
+## 9. Próximos Passos (Fase 2)
 
 Na Fase 1, é utilizado um limiar de decisão fixo de 0.5. No entanto, em cenários com elevado desequilíbrio de classes, este valor pode não ser adequado, uma vez que o modelo tende a produzir probabilidades baixas para a classe minoritária.
 
