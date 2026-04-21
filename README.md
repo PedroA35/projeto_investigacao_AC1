@@ -147,14 +147,35 @@ Para cada categoria de desequilíbrio identificada, foi definida a seguinte abor
 ---
 
 
-## 🛠️ 4. Pipeline de Tratamento de Dados
+## 🛠️ 4. Metodologia Experimental
 
-Para garantir que o modelo de Gradient Boosting processa corretamente os conjuntos de dados de benchmark, o script `final_assignment.py` executa um fluxo de pré-processamento rigoroso:
+A avaliação do algoritmo foi estruturada de forma a garantir a fiabilidade dos resultados e a consistência da análise em cenários de desequilíbrio de classes.
 
-- **Codificação de variáveis categóricas (Label Encoding):** Conversão automática de colunas de texto em valores numéricos, assegurando compatibilidade com operações numéricas do NumPy.
-- **Tratamento de valores em falta:** Preenchimento de valores em falta com base na moda (valor mais frequente), para variáveis categóricas, e na média, para variáveis numéricas. Esta abordagem evita a remoção de observações (*dropna*), o que seria crítico em classes minoritárias com poucas amostras.
-- **Validação hold-out:** Separação de 20% dos dados para teste. As métricas apresentadas são calculadas exclusivamente neste conjunto “invisível”, garantindo a integridade da avaliação.
+### 4.1. Implementação
 
+- **Desenvolvimento *from scratch*:** O algoritmo foi implementado utilizando exclusivamente **NumPy** e **SciPy**, sem recurso a bibliotecas externas como o *scikit-learn* para o modelo principal.
+- **Base de código:** A estrutura inicial foi adaptada do repositório *MLAlgorithms*, tendo sido modificada para suportar classificação binária e cálculo de resíduos com base na função de perda (*log loss*).
+
+
+
+### 4.2. Protocolo de Avaliação
+
+Para avaliar o impacto do desequilíbrio de classes, foi definido o seguinte protocolo experimental:
+
+- **Divisão de dados:** Utilização do método *hold-out* (80% treino / 20% teste).
+- **Repetições:** Cada experiência foi executada 5 vezes com diferentes sementes aleatórias, sendo reportada a média dos resultados.
+- **Métricas de avaliação:** Dado o foco em *class imbalance*, foram utilizadas:
+  - **F1-score:** Avalia o equilíbrio entre *precision* e *recall* na classe minoritária.
+  - **G-Mean:** Mede o equilíbrio entre o desempenho nas duas classes.
+  - **Accuracy:** Incluída apenas para ilustrar o seu caráter potencialmente enganador em dados desequilibrados.
+
+
+
+### 4.3. Pré-processamento de Dados
+
+- **Codificação de variáveis categóricas:** Aplicação de *Label Encoding* para conversão de variáveis categóricas em formato numérico.
+- **Tratamento de valores em falta:** Imputação através da moda (variáveis categóricas) e média (variáveis numéricas).
+- **Ambiente de execução:** O código foi desenvolvido e testado em ambiente Jupyter Notebook, garantindo reprodutibilidade experimental.
 
 ---
 
