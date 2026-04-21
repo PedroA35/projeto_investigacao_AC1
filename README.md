@@ -154,7 +154,7 @@ A avaliação do algoritmo foi estruturada de forma a garantir a fiabilidade dos
 ### 4.1. Implementação
 
 - **Desenvolvimento *from scratch*:** O algoritmo foi implementado utilizando exclusivamente **NumPy** e **SciPy**, sem recurso a bibliotecas externas como o *scikit-learn* para o modelo principal.
-- **Base de código:** A estrutura inicial foi adaptada do repositório *MLAlgorithms*, tendo sido modificada para suportar classificação binária e cálculo de resíduos com base na função de perda (*log loss*).
+- **Base de código:** A estrutura inicial foi adaptada do repositório [MLAlgorithms](https://github.com/rushter/MLAlgorithms), tendo sido modificada para suportar classificação binária e cálculo de resíduos com base na função de perda (*log loss*).
 
 
 
