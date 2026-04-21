@@ -107,6 +107,9 @@ A utilização do Gradient Boosting apresenta um conjunto de características fu
 
 
 ## ⚖️ 3. Escala de Dificuldade: *Imbalance Ratio* (IR)
+
+Após compreender o funcionamento do modelo, é fundamental analisar o contexto em que este será aplicado. Neste projeto, o principal desafio reside no desequilíbrio de classes, o qual é quantificado através do *Imbalance Ratio* (IR).
+
 O **IR** é um indicador fundamental da dificuldade do problema, que mede a proporção entre as classes minoritária e maioritária. Os conjuntos de dados foram classificados, segundo a seguinte escala de severidade:
 
 | Categoria | Intervalo IR | Exemplo no Projeto | Impacto Esperado |
