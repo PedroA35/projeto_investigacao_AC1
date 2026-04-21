@@ -149,6 +149,7 @@ Para cada categoria de desequilíbrio identificada, foi definida a seguinte abor
 
 
 Com base nesta caracterização, foi definida uma metodologia experimental adequada para avaliar o impacto do desequilíbrio de classes no desempenho do modelo.
+
 ---
 
 
@@ -187,7 +188,7 @@ Para avaliar o impacto do desequilíbrio de classes, foi definido o seguinte pro
 
 ## 📊 5. Métricas de Avaliação
 
-Dada a natureza desequilibrada dos dados, o desempenho do modelo é avaliado através das seguintes métricas:
+Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram utilizadas métricas adequadas a problemas com desequilíbrio de classes.
 
 | Métrica | Função | Justificação no contexto de desequilíbrio |
 | :--- | :--- | :--- |
