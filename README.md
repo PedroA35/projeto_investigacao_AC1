@@ -147,6 +147,8 @@ Para cada categoria de desequilíbrio identificada, foi definida a seguinte abor
    | **Conjunto de dados de IR suave** | Estes dados são utilizados para validar a integridade da implementação. Um desempenho fraco neste contexto pode indicar problemas na lógica do modelo, e não apenas efeitos do desequilíbrio. |
    
 
+
+Com base nesta caracterização, foi definida uma metodologia experimental adequada para avaliar o impacto do desequilíbrio de classes no desempenho do modelo.
 ---
 
 
