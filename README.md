@@ -228,7 +228,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 
 Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (*log loss*), tende a favorecer a classe maioritária.
 
-- ***Accuracy* enganadora:** Em conjuntos de dados como `oil_spill`, foram obtidos *accuracy values* superiores a 95%, apesar de um F1-score nulo. Isto evidencia que o modelo pode otimizar a métrica global sem capturar adequadamente a classe minoritária, privilegiando a classe dominante.
+- ***Accuracy* enganadora:** Em conjuntos de dados como `oil_spill`, foram obtidos valores de *accuracy* superiores a 95%, apesar de um F1-score nulo. Isto evidencia que o modelo pode otimizar a métrica global sem capturar adequadamente a classe minoritária, privilegiando a classe dominante.
 - **Fundamentação para melhorias:** Estes resultados justificam a necessidade de evoluir para abordagens como funções de custo ponderadas ou ajuste de limiares, que serão exploradas em fases futuras para melhorar a deteção da classe minoritária.
 
 
