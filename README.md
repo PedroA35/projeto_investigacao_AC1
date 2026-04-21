@@ -163,7 +163,7 @@ A avaliação do algoritmo foi estruturada de forma a garantir a fiabilidade dos
 ### 4.1. Implementação
 
 - **Desenvolvimento *from scratch*:** O algoritmo foi implementado utilizando exclusivamente **NumPy** e **SciPy**, sem recurso a bibliotecas externas como o *scikit-learn* para o modelo principal.
-- **Base de código:** A estrutura inicial foi adaptada do repositório [MLAlgorithms](https://github.com/rushter/MLAlgorithms), tendo sido modificada para suportar classificação binária e cálculo de resíduos com base na função de perda (*log loss*).
+- **Base de código:** A estrutura inicial foi adaptada do repositório [MLAlgorithms](https://github.com/rushter/MLAlgorithms), tendo sido adaptada para suportar classificação binária e cálculo de resíduos com base na função de perda (*log loss*).
 
 
 
@@ -196,7 +196,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 | Métrica | Função | Justificação no contexto de desequilíbrio |
 | :--- | :--- | :--- |
 | **Accuracy** | Mede a percentagem global de classificações corretas. | Frequentemente enganadora; um modelo pode atingir 99% de accuracy e falhar todos os casos positivos. |
-| **F1-score** | Combinação equilibrada entre *precision* e *recall*. | Métrica principal deste trabalho, pois penaliza modelos que ignoram a classe minoritária. |
+| **F1-score** | Média ponderada entre *precision* e *recall*. | Métrica principal deste trabalho, pois penaliza modelos que ignoram a classe minoritária. |
 | **Recall** | Capacidade de detetar a classe positiva. | Crucial em cenários sensíveis (ex.: diagnóstico), onde falhar um caso positivo tem elevado custo. |
 | **G-Mean** | Média geométrica entre *recall* da classe positiva e negativa. | Mede o equilíbrio entre classes, penalizando modelos enviesados para a classe maioritária e sendo especialmente útil em problemas de *class imbalance*. |
 
