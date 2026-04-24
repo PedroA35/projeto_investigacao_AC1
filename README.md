@@ -122,17 +122,17 @@ O **IR** é um indicador fundamental da dificuldade do problema, que mede a prop
 
 ### 3.1. Caracterização dos Datasets de Benchmark 
 
-A avaliação foi realizada em conjuntos de dados reais de diferentes domínios (medicina, biologia e engenharia), apresentando vários níveis de desequilíbrio entre classes (IR).
+A avaliação foi realizada em conjuntos de dados reais de diferentes domínios (medicina, biologia e engenharia), apresentando vários níveis de desequilíbrio entre classes (IR). Abaixo estão 7 dos conjuntos de dados selecionados, abrangindo os três níveis de dificuldade.
 
 | Conjunto de dados | Domínio | IR | Dificuldade Esperada |
 | :--- | :--- | :--- | :--- |
-| `aaaaa` | Área | 0.000 | Extrema |
-| `aaaaa` | Área | 0.000 | Extrema |
-| `aaaaa` | Área | 0.000 | Extrema |
-| `aaaaa` | Área | 0.000 | Moderada |
-| `aaaaa` | Área | 0.000 | Moderada |
-| `aaaaa` | Área | 0.000 | Suave |
-| `aaaaa` | Área | 0.000 | Suave |
+| `oil_spill` | Área | 0.0458 | Extrema |
+| `yeast_ml8` | Área | 0.0143 | Extrema |
+| `arsenic_male_lung` | Área | 0.0238 | Extrema |
+| `sick` | Área | 0.0652 | Moderada |
+| `lawsuit` | Área | 0.0776 | Moderada |
+| `backache` | Área | 0.1613 | Suave |
+| `chlamydia` | Área | 0.2346 | Suave |
 
 > Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.
 
