@@ -217,7 +217,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
    ```bash
    pip install numpy pandas scikit-learn scipy matplotlib seaborn
 3. **Executar o trabalho**:
-   Como o projeto está em formato de Notebook, deve abrir o ficheiro assignment_fase_1.ipynb no VS Code, Jupyter ou Google Colab e executar as células sequencialmente.
+   Como o projeto está em formato de Notebook, deve abrir o ficheiro `assignment.ipynb` no VS Code, Jupyter ou Google Colab e executar as células sequencialmente.
 
 
 ---
