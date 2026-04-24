@@ -212,13 +212,14 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 
 ## 7. Como Executar
 
-1. Colocar os ficheiros `.csv` na pasta `/data`.
-2. Instalar as dependências:
+1. **Organização dos Dados**: Certifique-se de que os ficheiros `.csv` estão dentro da pasta `/data` (o código está configurado para ler este diretório).
+2. **Instalar as dependências**:
    ```bash
-   pip install numpy pandas scikit-learn scipy
-3. Executar o script principal:
-   ```bash
-   python assignment.py
+   pip install numpy pandas scikit-learn scipy matplotlib seaborn
+3. **Executar o trabalho**:
+   Como o projeto está em formato de Notebook, deve abrir o ficheiro assignment_fase_1.ipynb no VS Code, Jupyter ou Google Colab e executar as células sequencialmente.
+
+
 ---
 
 
