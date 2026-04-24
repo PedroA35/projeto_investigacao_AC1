@@ -200,13 +200,11 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 ---
 
 
-## 6. Estrutura de Ficheiros
-* `gbm.py`: contém a lógica do Gradient Boosting e a função de perda (*log loss*).
-* `tree.py`: implementação da árvore de decisão (*weak learner*) sem dependências externas.
-* `assignment.py`: script de automação que carrega os conjuntos de dados da pasta `/data` e realiza:
-    * **Pré-processamento:** tratamento de valores omissos e codificação de variáveis categóricas.
-    * **Validação:** divisão aleatória (hold-out 80/20) para garantir a integridade estatística da avaliação.
-* `data/`: pasta onde devem ser colocados os ficheiros `.csv`.
+## 6. Estrutura de Repositório
+
+- `data/`: Contém os 7 datasets de benchmark (ficheiros `.csv`).
+- `assignment.ipynb`: Notebook principal com a implementação do GBM e análise experimental.
+- `README.md`: Documentação detalhada do projeto.
 
 
 ---
