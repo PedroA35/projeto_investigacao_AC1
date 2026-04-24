@@ -19,6 +19,16 @@ Este projeto foi desenvolvido por:
 ---
 
 
+## Estrutura de Repositório
+
+- `data/`: Contém os 7 datasets de benchmark (ficheiros `.csv`).
+- `assignment.ipynb`: Notebook principal com a implementação do GBM e análise experimental.
+- `README.md`: Documentação detalhada do projeto.
+
+
+---
+
+
 ## 1. Resumo do Projeto
 
 O **Gradient Boosting Classifier** é um método de *ensemble* (combinação de múltiplos modelos) robusto. No entanto, apresenta frequentemente limitações em conjuntos de dados onde uma classe é significativamente mais frequente do que a outra, problema conhecido como *class imbalance*. Este trabalho explora:
@@ -200,17 +210,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 ---
 
 
-## 6. Estrutura de Repositório
-
-- `data/`: Contém os 7 datasets de benchmark (ficheiros `.csv`).
-- `assignment.ipynb`: Notebook principal com a implementação do GBM e análise experimental.
-- `README.md`: Documentação detalhada do projeto.
-
-
----
-
-
-## 7. Como Executar
+## 6. Como Executar
 
 1. **Organização dos Dados**: Certifique-se de que os ficheiros `.csv` estão dentro da pasta `/data` (o código está configurado para ler este diretório).
 2. **Instalar as dependências**:
@@ -223,7 +223,7 @@ Para avaliar o desempenho do modelo nos cenários descritos anteriormente, foram
 ---
 
 
-## 8. Conclusões da Fase 1
+## 7. Conclusões da Fase 1
 
 Os resultados experimentais validam a hipótese central da investigação: o Gradient Boosting padrão, ao minimizar a função de perda global (*log loss*), tende a favorecer a classe maioritária.
 
@@ -234,7 +234,7 @@ Os resultados experimentais validam a hipótese central da investigação: o Gra
 ---
 
 
-## 9. Próximos Passos (Fase 2)
+## 8. Próximos Passos (Fase 2)
 
 Na Fase 1, é utilizado um limiar de decisão fixo de 0.5. No entanto, em cenários com elevado desequilíbrio de classes, este valor pode não ser adequado, uma vez que o modelo tende a produzir probabilidades baixas para a classe minoritária.
 
