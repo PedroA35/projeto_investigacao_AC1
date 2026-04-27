@@ -136,13 +136,13 @@ A avaliação foi realizada em conjuntos de dados reais de diferentes domínios 
 
 | Conjunto de dados | Domínio | IR | Dificuldade Esperada |
 | :--- | :--- | :--- | :--- |
-| `oil_spill` | Área | 0.0458 | Extrema |
-| `yeast_ml8` | Área | 0.0143 | Extrema |
-| `arsenic_male_lung` | Área | 0.0238 | Extrema |
-| `sick` | Área | 0.0652 | Moderada |
-| `lawsuit` | Área | 0.0776 | Moderada |
-| `backache` | Área | 0.1613 | Suave |
-| `chlamydia` | Área | 0.2346 | Suave |
+| `oil_spill` | Engenharia | 0.0458 | Extrema |
+| `yeast_ml8` | Biologia | 0.0143 | Extrema |
+| `arsenic_male_lung` | Medicina | 0.0238 | Extrema |
+| `sick` | Medicina | 0.0652 | Moderada |
+| `lawsuit` | Jurídico | 0.0776 | Moderada |
+| `backache` | Medicina | 0.1613 | Suave |
+| `chlamydia` | Medicina | 0.2346 | Suave |
 
 > Nota: Cada conjunto de dados foi avaliado 5 vezes através de divisões aleatórias do tipo hold-out (80/20). Os resultados apresentados correspondem à média dessas execuções.
 
